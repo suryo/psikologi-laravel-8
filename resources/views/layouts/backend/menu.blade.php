@@ -61,14 +61,28 @@
                     <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Tentang</span></a>
                         <ul class="menu-content">
                             <li class="nav-item {{ (request()->is('backend-profile-sekolah')) ? 'active' : '' }}">
-                                <a class="d-flex align-items-center" href="{{route('backend-profile-sekolah.index')}}"><span class="menu-item text-truncate" data-i18n="Third Level">Profile TP2S</span></a>
+                                <a class="d-flex align-items-center" href="{{route('backend-profile-sekolah.index')}}"><span class="menu-item text-truncate" data-i18n="Third Level">Profile</span></a>
                             </li>
                             <li class="nav-item {{ (request()->is('backend-visimisi')) ? 'active' : '' }}">
                                 <a class="d-flex align-items-center" href="{{route('backend-visimisi.index')}}"><span class="menu-item text-truncate" data-i18n="Third Level">Visi dan Misi</span></a>
                             </li>
                         </ul>
                     </li>
-                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">RKA</span></a>
+
+                    <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Tes</span></a>
+                        <ul class="menu-content">
+                            <li class="nav-item {{ (request()->is('tiu')) ? 'active' : '' }}">
+                                <a class="d-flex align-items-center" href="tiu"><span class="menu-item text-truncate" data-i18n="Third Level">TIU</span></a>
+                            </li>
+                            <li class="nav-item {{ (request()->is('papi')) ? 'active' : '' }}">
+                                <a class="d-flex align-items-center" href="papi"><span class="menu-item text-truncate" data-i18n="Third Level">PAPI</span></a>
+                            </li>
+                            <li class="nav-item {{ (request()->is('riasec')) ? 'active' : '' }}">
+                                <a class="d-flex align-items-center" href="riasec"><span class="menu-item text-truncate" data-i18n="Third Level">RIASEC</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    {{-- <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">RKA</span></a>
                         <ul class="menu-content">
                             <li class="nav-item {{ (request()->is('backend-datarka')) ? 'active' : '' }}">
                                 <a class="d-flex align-items-center" href="{{route('backend-datarka.index')}}"><span class="menu-item text-truncate" data-i18n="Third Level">RKA</span></a>
@@ -80,7 +94,7 @@
                                 <a class="d-flex align-items-center" href="{{route('backend-datarka.index')}}?jenis=Program Intervensi Spesifik"><span class="menu-item text-truncate" data-i18n="Third Level">RKA Program Intervensi Spesifik</span></a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
 
 

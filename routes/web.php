@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\SettingController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+// use App\Http\Controllers\TiuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::resource('tiu', TiuController::class);
+Route::resource('papi', PapiController::class);
+Route::resource('riasec', RiasecController::class);
+
 
 // Route::get('backend-datarka-tpps',[App\Http\Controllers\Backend\Website\DataRkaController::class,'index'])->name('backend.datarka.tpps');
 Route::resources([
