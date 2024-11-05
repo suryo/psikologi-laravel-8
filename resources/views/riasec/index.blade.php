@@ -4,7 +4,9 @@
 @section('content')
 <div class="container">
     <h1>Data RIASEC</h1>
-    <a href="{{ route('riasec.create') }}" class="btn btn-primary">Tambah Data</a>
+    <a href="{{ route('riasec.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
+    <a href="{{ route('riasec.test') }}" class="btn btn-secondary mb-3">View Test</a>
+
     
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

@@ -86,4 +86,9 @@ class TiuController extends Controller
         return redirect()->route('tiu.index')
                          ->with('success', 'Data berhasil dihapus.');
     }
+
+    public function showTestPage()
+    {
+        return view('tiu.test');
+    }
 }

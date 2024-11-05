@@ -6,6 +6,7 @@
     <h1>Daftar Tiu</h1>
 
     <a href="{{ route('tiu.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
+    <a href="{{ route('tiu.test') }}" class="btn btn-secondary mb-3">View Test</a>
 
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

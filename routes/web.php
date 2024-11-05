@@ -20,6 +20,12 @@ Route::resource('papi', PapiController::class);
 Route::resource('riasec', RiasecController::class);
 
 
+Route::get('/tiu-test', [App\Http\Controllers\TiuController::class, 'showTestPage'])->name('tiu.test');
+Route::get('/papi-test', [App\Http\Controllers\PapiController::class, 'showTestPage'])->name('papi.test');
+
+Route::get('/riasec-test', [App\Http\Controllers\RiasecController::class, 'showTestPage'])->name('riasec.test');
+
+
 // Route::get('backend-datarka-tpps',[App\Http\Controllers\Backend\Website\DataRkaController::class,'index'])->name('backend.datarka.tpps');
 Route::resources([
   'backend-datarka' => Backend\Website\DataRkaController::class

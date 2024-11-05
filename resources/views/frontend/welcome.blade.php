@@ -1,6 +1,6 @@
 @extends('layouts.Frontend.app')
 @section('title')
-    TP2S
+    Griya Psikologi UWP
 @endsection
 
 @section('content')

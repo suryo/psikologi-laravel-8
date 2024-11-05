@@ -73,7 +73,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                <p>&copy; {{date('Y')}} <a href="http://andridesmana.pw/" target="_blank">Andri Desmana</a> All Rights Reserved.</p>
+                <p>&copy; {{date('Y')}} <a href="http://github.com/suryo/" target="_blank">IntegerHead</a> All Rights Reserved.</p>
             </div>
         </div>
     </div>
