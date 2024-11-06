@@ -6,6 +6,7 @@
     <h1>Data RIASEC</h1>
     <a href="{{ route('riasec.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
     <a href="{{ route('riasec.test') }}" class="btn btn-secondary mb-3">View Test</a>
+    <a href="{{ route('riasec.report') }}" class="btn btn-warning mb-3">Result</a>
 
     
     @if (session('success'))

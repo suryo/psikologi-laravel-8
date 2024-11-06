@@ -6,6 +6,7 @@
     <h1>Daftar Data PAPI</h1>
     <a href="{{ route('papi.create') }}" class="btn btn-primary mb-3">Tambah Data PAPI</a>
     <a href="{{ route('papi.test') }}" class="btn btn-secondary mb-3">View Test</a>
+    <a href="{{ route('papi.report') }}" class="btn btn-warning mb-3">Result</a>
 
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

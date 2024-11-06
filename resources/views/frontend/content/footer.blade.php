@@ -64,8 +64,12 @@
         <div class="row">
             <div class="col-lg-12 col-md-8 col-sm-8 col-xs-12">
                 <p>
-                    Dokumen ini disusun atas dukungan Global Financing Facility – World Bank melalui Sekretariat Wakil Presiden Republik Indonesia untuk pelaksanaan Program Investing in Nutrition Early Years (INEY). Isi dari dokumen ini sepenuhnya menjadi tanggung jawab TP2S dan tidak selalu mencerminkan pandangan Global Financing Facility – World Bank dan Pemerintah Indonesia.
+                    Hubungi kami sekarang juga
                 </p>
+                081234419532 <br>
+                089666596704 <br>
+                Griya Psikologi, Jl. Raya Benowo 1-3, <br>
+                Surabaya, Jawa Timur, Indonesia
             </div>  
         </div> 
     </div>

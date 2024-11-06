@@ -41,8 +41,8 @@
                             <li><a href="#">Tentang Kami</a>
                                 <ul>
                                     <li><a href=" {{route('profile.sekolah')}} ">Profile</a></li>
-                                    {{-- <li><a href=" {{route('visimisi.sekolah')}} ">Visi dan Misi</a></li> --}}
-                                    <li><a href=" {{route('pilar_program')}} ">Pilar Program</a></li>
+                                    <li><a href=" {{route('visimisi.sekolah')}} ">Visi dan Misi</a></li>
+                                    {{-- <li><a href=" {{route('pilar_program')}} ">Pilar Program</a></li> --}}
                                  
                                 </ul>
                             </li>

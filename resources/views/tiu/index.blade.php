@@ -7,6 +7,7 @@
 
     <a href="{{ route('tiu.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
     <a href="{{ route('tiu.test') }}" class="btn btn-secondary mb-3">View Test</a>
+    <a href="{{ route('tiu.report') }}" class="btn btn-warning mb-3">Result</a>
 
     @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

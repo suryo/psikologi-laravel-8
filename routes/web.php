@@ -21,9 +21,12 @@ Route::resource('riasec', RiasecController::class);
 
 
 Route::get('/tiu-test', [App\Http\Controllers\TiuController::class, 'showTestPage'])->name('tiu.test');
+Route::get('/tiu-report', [App\Http\Controllers\TiuController::class, 'report'])->name('tiu.report');
 Route::get('/papi-test', [App\Http\Controllers\PapiController::class, 'showTestPage'])->name('papi.test');
+Route::get('/papi-report', [App\Http\Controllers\PapiController::class, 'report'])->name('papi.report');
 
 Route::get('/riasec-test', [App\Http\Controllers\RiasecController::class, 'showTestPage'])->name('riasec.test');
+Route::get('/riasec-report', [App\Http\Controllers\RiasecController::class, 'report'])->name('riasec.report');
 
 
 // Route::get('backend-datarka-tpps',[App\Http\Controllers\Backend\Website\DataRkaController::class,'index'])->name('backend.datarka.tpps');
@@ -39,7 +42,7 @@ Route::get('/','Frontend\IndexController@index');
         Route::get('profile-sekolah',[App\Http\Controllers\Frontend\IndexController::class,'profileSekolah'])->name('profile.sekolah');
 
         //// VISI dan MISI
-        // Route::get('visi-dan-misi',[App\Http\Controllers\Frontend\IndexController::class,'visimisi'])->name('visimisi.sekolah');
+        Route::get('visi-dan-misi',[App\Http\Controllers\Frontend\IndexController::class,'visimisi'])->name('visimisi.sekolah');
         Route::get('pilar-program', function () {
             return view('frontend.content.pilarprogram');
         })->name('pilar_program');
