@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Papi;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class PapiController extends Controller
 {
@@ -13,7 +14,12 @@ class PapiController extends Controller
      */
     public function index()
     {
-        $papiItems = Papi::all();
+        if (Auth::user()->role == 'User') {
+            $papiItems = Papi::where('no_pendaftaran','=',Auth::user()->username)->get();
+        } else {
+            $papiItems = Papi::all();
+        }
+        // $papiItems = Papi::all();
         return view('papi.index', compact('papiItems'));
     }
 

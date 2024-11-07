@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Riasec;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class RiasecController extends Controller
 {
     /**
@@ -12,7 +13,12 @@ class RiasecController extends Controller
      */
     public function index()
     {
-        $riasecItems = Riasec::all();
+        if (Auth::user()->role == 'User') {
+            $riasecItems = Riasec::where('no_pendaftaran','=',Auth::user()->username)->get();
+        } else {
+            $riasecItems = Riasec::all();
+        }
+        // $riasecItems = Riasec::all();
         return view('riasec.index', compact('riasecItems'));
     }
 

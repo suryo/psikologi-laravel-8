@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tiu;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class TiuController extends Controller
 {
@@ -13,7 +14,12 @@ class TiuController extends Controller
      */
     public function index()
     {
-        $tiuItems = Tiu::all();
+        if (Auth::user()->role == 'User') {
+            $tiuItems = Tiu::where('no_pendaftaran','=',Auth::user()->username)->get();
+        } else {
+            $tiuItems = Tiu::all();
+        }
+
         return view('tiu.index', compact('tiuItems'));
     }
 
@@ -38,7 +44,7 @@ class TiuController extends Controller
         Tiu::create($request->all());
 
         return redirect()->route('tiu.index')
-                         ->with('success', 'Data berhasil ditambahkan.');
+            ->with('success', 'Data berhasil ditambahkan.');
     }
 
     /**
@@ -73,7 +79,7 @@ class TiuController extends Controller
         $tiu->update($request->all());
 
         return redirect()->route('tiu.index')
-                         ->with('success', 'Data berhasil diupdate.');
+            ->with('success', 'Data berhasil diupdate.');
     }
 
     /**
@@ -85,7 +91,7 @@ class TiuController extends Controller
         $tiu->delete();
 
         return redirect()->route('tiu.index')
-                         ->with('success', 'Data berhasil dihapus.');
+            ->with('success', 'Data berhasil dihapus.');
     }
 
     public function showTestPage()
@@ -95,11 +101,11 @@ class TiuController extends Controller
 
     public function report()
     {
-        
+
         $result = [];
         echo "tiu";
         $data =  DB::table('tiu')
-         ->orderBy('id', 'desc')
+            ->orderBy('id', 'desc')
             ->get();
         // dd($data);
         for ($d = 0; $d < count($data); $d++) {
@@ -282,5 +288,4 @@ class TiuController extends Controller
         return view('tiu.report', ['data' => $result]);
         // return response()->json(['status' => 'success', 'data' => $result, 'code' => 200]);
     }
-
 }

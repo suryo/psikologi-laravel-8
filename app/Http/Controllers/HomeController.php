@@ -12,6 +12,11 @@ use Modules\Perpustakaan\Entities\Book;
 use Modules\Perpustakaan\Entities\Borrowing;
 use Modules\Perpustakaan\Entities\Member;
 use App\Models\DataRka;
+use App\Models\Papi;
+use App\Models\Riasec;
+use App\Models\Tiu;
+
+
 
 class HomeController extends Controller
 {
@@ -41,7 +46,12 @@ class HomeController extends Controller
               $guru = User::where('role','Guru')->where('status','Aktif')->count();
               $murid = User::where('role','Murid')->where('status','Aktif')->count();
               $alumni = User::where('role','Alumni')->where('status','Aktif')->count();
+              $psikolog = User::where('role','Psikolog')->where('status','Aktif')->count();
+              $user = User::where('role','User')->where('status','Aktif')->count();
               $acara = Events::where('is_active','0')->count();
+              $tiu = Tiu::count();
+              $riasec = Riasec::count();
+              $papi = Papi::count();
               $event = Events::where('is_active','0')->orderBy('created_at','desc')->first();
               $book = Book::sum('stock');
               $borrow = Borrowing::whereNull('lateness')->count();
@@ -49,7 +59,7 @@ class HomeController extends Controller
 
               $rkas = DataRka::all()->count();
 
-              return view('backend.website.home', compact('guru','murid','alumni','event','acara','book','borrow','member','rkas'));
+              return view('backend.website.home', compact('tiu', 'riasec', 'papi','psikolog','user','guru','murid','alumni','event','acara','book','borrow','member','rkas'));
 
 
             }
@@ -61,6 +71,41 @@ class HomeController extends Controller
             }
             // DASHBOARD MURID \\
             elseif ($role == 'Murid') {
+              $auth = Auth::id();
+
+              $event = Events::where('is_active','0')->first();
+              $lateness = Borrowing::with('members')
+              ->when(isset($auth), function($q) use($auth){
+                $q->whereHas('members', function($a) use($auth){
+                  switch ($auth) {
+                    case $auth:
+                     $a->where('user_id', Auth::id());
+                      break;
+                  }
+                });
+              })
+              ->whereNull('lateness')
+              ->count();
+
+
+              $pinjam = Borrowing::with('members')
+              ->when(isset($auth), function($q) use($auth){
+                $q->whereHas('members', function($a) use($auth){
+                  switch ($auth) {
+                    case $auth:
+                     $a->where('user_id', Auth::id());
+                      break;
+                  }
+                });
+              })
+              ->count();
+
+              return view('murid::index', compact('event','lateness','pinjam'));
+
+            }
+
+            // DASHBOARD USER \\
+            elseif ($role == 'User') {
               $auth = Auth::id();
 
               $event = Events::where('is_active','0')->first();

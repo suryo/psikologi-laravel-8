@@ -35,8 +35,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div>
-                                <h2 class="font-weight-bolder mb-0">{{$guru}}</h2>
-                                <p class="card-text">Stakeholder</p>
+                                <h2 class="font-weight-bolder mb-0">{{$user}}</h2>
+                                <p class="card-text">User</p>
                             </div>
                             <div class="avatar bg-light-primary p-50 m-0">
                                 <div class="avatar-content">
@@ -50,8 +50,8 @@
                         <div class="card">
                             <div class="card-header">
                                 <div>
-                                    <h2 class="font-weight-bolder mb-0">{{$acara}}</h2>
-                                    <p class="card-text">Acara</p>
+                                    <h2 class="font-weight-bolder mb-0">{{$papi}}</h2>
+                                    <p class="card-text">Papi</p>
                                 </div>
                                 <div class="avatar bg-light-danger p-50 m-0">
                                     <div class="avatar-content">
@@ -69,8 +69,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div>
-                                <h2 class="font-weight-bolder mb-0">{{$rkas}}</h2>
-                                <p class="card-text">Document</p>
+                                <h2 class="font-weight-bolder mb-0">{{$tiu}}</h2>
+                                <p class="card-text">TIU</p>
                             </div>
                             <div class="avatar bg-light-warning p-50 m-0">
                                 <div class="avatar-content">
@@ -84,8 +84,8 @@
                         <div class="card">
                             <div class="card-header">
                                 <div>
-                                    <h2 class="font-weight-bolder mb-0">{{$alumni}}</h2>
-                                    <p class="card-text">Alumni</p>
+                                    <h2 class="font-weight-bolder mb-0">{{$riasec}}</h2>
+                                    <p class="card-text">Riasec</p>
                                 </div>
                                 <div class="avatar bg-light-success p-50 m-0">
                                     <div class="avatar-content">

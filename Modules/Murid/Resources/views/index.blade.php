@@ -8,7 +8,7 @@
 <div class="content-wrapper container-xxl p-0">
     <div class="content-body">
         <div class="row">
-            <div class="col-lg-7 col-md-12 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card card-congratulations">
                     <div class="card-body text-center">
                         <img src="{{asset('Assets/Backend/images/pages/decore-left.png')}}" class="congratulations-img-left" alt="card-img-left" />
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5 d-none">
               <div class="card card-congratulation-medal">
                   <div class="card-body">
                       <h5>Selamat 🎉 {{Auth::user()->name}}!</h5>
@@ -42,7 +42,7 @@
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-lg-4 col-md-6 col-12 d-none">
                 <div class="card card-developer-meetup">
                     <div class="meetup-img-wrapper rounded-top text-center">
                         <img src="{{asset('Assets/Backend/images/illustration/email.svg')}}" alt="Meeting Pic" height="170" />
@@ -85,12 +85,12 @@
                 </div>
             </div>
 
-            <div class="col-xl-8 col-md-6 col-12">
+            <div class="col-xl-12 col-md-6 col-12">
               <div class="row">
                 <div class="col-12">
                     <div class="card card-statistics">
                         <div class="card-header">
-                            <h4 class="card-title">Perpustakaan</h4>
+                            <h4 class="card-title">Result</h4>
                             <div class="d-flex align-items-center">
                                 <p class="card-text font-small-2 mr-25 mb-0">Updated 1 day ago</p>
                             </div>

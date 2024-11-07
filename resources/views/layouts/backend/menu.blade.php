@@ -162,15 +162,27 @@
                 <ul class="menu-content">
 
 
-                    <li class="nav-item {{ (request()->is('backend-pengguna-tpps')) ? 'active' : '' }}">
+                    {{-- <li class="nav-item {{ (request()->is('backend-pengguna-tpps')) ? 'active' : '' }}">
                         <a class="d-flex align-items-center" href=" {{route('backend-pengguna-tpps.index')}} "><i data-feather="circle"></i>
                             <span class="menu-item text-truncate" data-i18n="Basic">TPPS</span>
                         </a>
-                    </li>
+                    </li> --}}
 
-                    <li class="nav-item {{ (request()->is('backend-pengguna-stakeholder')) ? 'active' : '' }}">
+                    {{-- <li class="nav-item {{ (request()->is('backend-pengguna-stakeholder')) ? 'active' : '' }}">
                         <a class="d-flex align-items-center" href=" {{route('backend-pengguna-stakeholder.index')}} "><i data-feather="circle"></i>
                             <span class="menu-item text-truncate" data-i18n="Basic">stakeholder</span>
+                        </a>
+                    </li> --}}
+
+                    <li class="nav-item {{ (request()->is('backend-pengguna-psikolog')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href=" {{route('backend-pengguna-psikolog.index')}} "><i data-feather="circle"></i>
+                            <span class="menu-item text-truncate" data-i18n="Basic">Psikolog</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item {{ (request()->is('backend-pengguna-user')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href=" {{route('backend-pengguna-user.index')}} "><i data-feather="circle"></i>
+                            <span class="menu-item text-truncate" data-i18n="Basic">User</span>
                         </a>
                     </li>
 
@@ -231,6 +243,21 @@
                     </li>
                 </ul>
             </li>
+            @elseif(Auth::user()->role == 'User')
+            {{-- <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Second Level">Tes</span></a>
+                <ul class="menu-content"> --}}
+                    <li class="nav-item {{ (request()->is('tiu')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href="tiu"><span class="menu-item text-truncate" data-i18n="Third Level"><i data-feather="home"></i>TIU</span></a>
+                    </li>
+                    <li class="nav-item {{ (request()->is('papi')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href="papi"><span class="menu-item text-truncate" data-i18n="Third Level"><i data-feather="home"></i>PAPI</span></a>
+                    </li>
+                    <li class="nav-item {{ (request()->is('riasec')) ? 'active' : '' }}">
+                        <a class="d-flex align-items-center" href="riasec"><span class="menu-item text-truncate" data-i18n="Third Level"><i data-feather="home"></i>RIASEC</span></a>
+                    </li>
+                {{-- </ul>
+            </li> --}}
+            
             {{-- MENU GURU --}}
             @elseif(Auth::user()->role == 'Guru')
             <li class=" nav-item">
